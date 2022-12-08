@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+{% block predmeti%}
+{% for movie in data%}
+{{ movie.name}}:
+{% for actor in movie.actors.all %}
+{{ actor.firstname}}
+{% endfor %}
+{{ movie.director}}<br>
+{% endfor %}
+{%endblock%}

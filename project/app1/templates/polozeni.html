@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block polozeni %}
+
+<h3>Popis studenata</h3>
+
+
+{% for predmet in data %}
+{{predmet.name}} {{predmet.ects}}<br><br>
+
+{% endfor %}
+
+<h3>Popis studenata</h3>
+{{"Zbroj bodova:"}}{{zbroj}}
+{% endblock %}

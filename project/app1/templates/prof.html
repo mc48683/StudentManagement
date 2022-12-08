@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block prof_predmeti %}
+<div class="nav">
+    <a href="{%url 'logout' %}">Logout</a>
+</div>
+<div class="prof">
+
+
+<h3>Popis predmeta</h3>
+{% for predmet in data %}
+<div class="box">
+{{predmet}}<a href="{%url 'details' predmet.id %}"> Details</a><br>
+{% endfor %}
+<br><br>
+</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+
+{% extends 'base.html' %}
+{% block insert_predmet %}
+<div class="form">
+    <div class="f">
+        <form method="post">
+            <!-- <h1>Add movies!<h1> -->
+            {{form}}<br>
+            <input type="submit" class="btn btn-primary" value="Dodaj predmet">
+            {% csrf_token %}
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+

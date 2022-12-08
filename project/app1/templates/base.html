@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+</head>
+
+<body>
+
+    {% block content %}
+    {% endblock %}
+
+    {% block login_page %}
+    {% endblock %}
+
+    
+    {% block register_page %}
+    {% endblock %}
+    {% block navigation %}
+    {% endblock %}
+    {% block insert_predmet %}
+    {% endblock %}
+    {% block prof_predmeti %}
+    {% endblock %}
+    {% block administrator %}
+    {% endblock %}
+    {% block admin_predmeti %}
+    {% endblock %}
+    {% block admin_prof %}
+    {% endblock %}
+    {% block admin_studenti %}
+    {% endblock %}
+    {% block insert_student %}
+    {% endblock %}
+    {% block insert_profesor %}
+    {% endblock %}
+    {% block edit_profesor %}
+    {% endblock %}
+    {% block edit_student %}
+    {% endblock %}
+    {% block edit_predmet %}
+    {% endblock %}
+    {% block popis_studenata %}
+    {% endblock %}
+    {% block details %}
+    {% endblock %}
+    {% block polozeno %}
+    {% endblock %}
+    {% block izgubio %}
+    {% endblock %}
+    {% block confirm_ispis %}
+    {% endblock %}
+    {% block student %}
+    {% endblock %}
+    {% block student_izv %}
+    {% endblock %}
+    {% block student_red %}
+    {% endblock %}
+    {% block upisni_list %}
+    {% endblock %}
+    {% block upisi_admin %}
+    {% endblock %}
+    {% block upisni_list_izv %}
+    {% endblock %}
+    {% block upisni_list_red %}
+    {% endblock %}
+    {% block upisi %}
+    {% endblock %}
+    {% block ects %}
+    {% endblock %}
+    {% block polozeni %}
+    {% endblock %}
+    {% block logout %}
+    {% endblock %}
+    {% block result %}
+    {% endblock %}
+
+</body>
+</html>

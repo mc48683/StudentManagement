@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block administrator %}
+<div class="nav">
+    <a href="{%url 'logout' %}">Logout</a><br>
+    <a href="{%url 'admin_predmeti' %}">Predmeti</a><br>
+    <a href="{%url 'admin_studenti' %}">Studenti</a><br>
+    <a href="{%url 'admin_prof' %}">Profesori</a><br>
+</div>
+
+{% endblock %}

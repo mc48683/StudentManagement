@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block confirm_ispis %}
+<form action="{% url 'ispisi' data %}" method="POST">
+    <p>Želite li se ispisati s predmeta?</p>
+    {% csrf_token %}
+    <input type="submit" name="da" value="da">
+    <input type="submit" name="ne" value="ne">
+</form>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends 'base.html'%}
+{% block student %}
+<div class="nav">
+    <a href="{%url 'logout' %}">Logout</a>
+</div>
+{{data.status}}
+{% endblock %}

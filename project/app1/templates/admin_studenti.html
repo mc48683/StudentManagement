@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block admin_studenti %}
+<div class="nav">
+    <a href="{%url 'logout' %}">Logout</a><br>
+    <a href="{%url 'admin_predmeti' %}">Predmeti</a><br>
+    <a href="{%url 'admin_prof' %}">Profesori</a>
+</div>
+<div class="out">
+<h3>Popis studenata</h3>
+    <div class="box">
+    <a href="{%url 'insert_student' %}">Dodaj studenta</a><br><br>
+    {% for student in data %}
+    {{student}} <a href="{%url 'edit_student' student.id %}">Edit</a> <a href="{%url 'upisni_list' student.id %}">Upisni list</a><br>
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}

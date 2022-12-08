@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block details %}
+
+
+<div class="nav">
+    <a href="{%url 'logout' %}">Logout</a>
+</div>
+<div class="details">
+
+
+{% for naslov in ime %}
+<h3>{{naslov}}</h3>
+{% endfor %}
+
+<div class="box">
+<h4>{{"Studenti koji su polozili predmet"}}</h4>
+{% for upis, ime in data %}
+
+{{ime}}<br><br>
+
+{% endfor %}
+
+
+<h4>{{"Studenti koji su izgubili potpis"}}</h4>
+{% for upis, ime in zip2 %}
+
+{{ime}}<br><br>
+{% endfor %}
+
+
+<h4>{{"Studenti koji su dobili potpis, ali jos nisu polozili predmet"}}</h4>
+{% for upis, ime in zip3 %}
+
+{{ime}}<br><form method="post" action="{%url 'polozeno' upis.id %}"><button type="submit" class="btn btn1 btn-danger">Polozio</button>{% csrf_token %}</form>
+<form method="post" action="{%url 'izgubio' upis.id %}"><button type="submit" class="btn btn1 btn-danger">Izgubio potpis</button>{% csrf_token %}</form>
+<a href="{%url 'confirm_ispis' upis.id %}">Ispisi</a><br>
+<br><br>
+{% endfor %}
+<br><br>
+</div>
+</div>
+{% endblock %}
+<!-- 
+"{%url 'details' upis.id %}" -->

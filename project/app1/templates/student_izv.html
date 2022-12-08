@@ -1,0 +1,103 @@
+{% extends 'base.html'%}
+{% block student_izv %}
+
+<div class="nav">
+    <a href="{%url 'logout' %}">Logout</a>
+</div>
+<div class="out">
+    
+    <h3>{{"Predmeti"}}</h3>
+    <div class="box">
+    {% for predmet in all%}
+        {{predmet.name}}<form method="post" action="{%url 'upisi' predmet.id %}"><button type="submit" class="btn btn-primary">Upisi</button>{% csrf_token %}</form><br>
+    {% endfor %}
+
+    <h3>{{"1. semestar"}}</h3>
+    <h5>{{"Polozeni"}}</h5>
+    {% for predmet in pol1%}
+        {{predmet.name}}<br>
+    {% endfor %}
+    <h5>{{"Upisani"}}</h5>
+    {% for predmet,upis in zip1%}
+        {{predmet.name}} <a href="{%url 'confirm_ispis' upis.id %}">Ispisi</a><br>
+    {% endfor %}
+
+    
+    <h3>{{"2. semestar"}}</h3>
+    <h5>{{"Polozeni"}}</h5>
+    {% for predmet in pol2%}
+        {{predmet.name}}<br>
+    {% endfor %}
+    <h5>{{"Upisani"}}</h5>
+    {% for predmet,upis in zip2%}
+    {{predmet.name}} <a href="{%url 'confirm_ispis' upis.id %}">Ispisi</a><br>
+    {% endfor %}
+
+    <h3>{{"3. semestar"}}</h3>
+    <h5>{{"Polozeni"}}</h5>
+    {% for predmet in pol3%}
+        {{predmet.name}}<br>
+    {% endfor %}
+    <h5>{{"Upisani"}}</h5>
+    {% for predmet,upis in zip3%}
+    {{predmet.name}} <a href="{%url 'confirm_ispis' upis.id %}">Ispisi</a><br>
+    {% endfor %}
+
+
+    <h3>{{"4. semestar"}}</h3>
+    <h5>{{"Polozeni"}}</h5>
+    {% for predmet in pol4%}
+        {{predmet.name}}<br>
+    {% endfor %}
+    <h5>{{"Upisani"}}</h5>
+    {% for predmet,upis in zip4%}
+    {{predmet.name}} <a href="{%url 'confirm_ispis' upis.id %}">Ispisi</a><br>
+    {% endfor %}
+
+
+    <h3>{{"5. semestar"}}</h3>
+    <h5>{{"Polozeni"}}</h5>
+    {% for predmet in pol5%}
+        {{predmet.name}}<br>
+    {% endfor %}
+    <h5>{{"Upisani"}}</h5>
+    {% for predmet,upis in zip5%}
+    {{predmet.name}} <a href="{%url 'confirm_ispis' upis.id %}">Ispisi</a><br>
+    {% endfor %}
+
+
+    <h3>{{"6. semestar"}}</h3>
+    <h5>{{"Polozeni"}}</h5>
+    {% for predmet in pol6%}
+        {{predmet.name}}<br>
+    {% endfor %}
+    <h5>{{"Upisani"}}</h5>
+    {% for predmet,upis in zip6%}
+    {{predmet.name}} <a href="{%url 'confirm_ispis' upis.id %}">Ispisi</a><br>
+    {% endfor %}
+
+
+    <h3>{{"7. semestar"}}</h3>
+    <h5>{{"Polozeni"}}</h5>
+    {% for predmet in pol7%}
+        {{predmet.name}}<br>
+    {% endfor %}
+    <h5>{{"Upisani"}}</h5>
+    {% for predmet,upis in zip7%}
+    {{predmet.name}} <a href="{%url 'confirm_ispis' upis.id %}">Ispisi</a><br>
+    {% endfor %}
+
+
+    <h3>{{"8. semestar"}}</h3>
+    <h5>{{"Polozeni"}}</h5>
+    {% for predmet in pol8%}
+        {{predmet.name}}<br>
+    {% endfor %}
+    <h5>{{"Upisani"}}</h5>
+    {% for predmet,upis in zip8%}
+    {{predmet.name}} <a href="{%url 'confirm_ispis' upis.id %}">Ispisi</a><br>
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}
+

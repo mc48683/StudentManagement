@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block admin_predmeti %}
+<div class="nav">
+    <a href="{%url 'logout' %}">Logout</a><br>
+    <a href="{%url 'admin_studenti' %}">Studenti</a><br>
+    <a href="{%url 'admin_prof' %}">Profesori</a>
+</div>
+<div class="out">
+<h3>Popis predmeta</h3>
+    <div class="box">
+    <a href="{%url 'insert_predmet' %}">Dodaj novi predmet</a><br><br>
+    {% for predmet in data %}
+    {{predmet}} <a href="{%url 'popis_studenata' predmet.id %}">Vidi popis studenata</a> <a href="{%url 'edit_predmet' predmet.id %}">Edit</a><br>
+    {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

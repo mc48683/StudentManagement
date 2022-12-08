@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block login_page %}
+<form method="post">
+
+    <div class="row">
+        <div class="login">
+            <div class="l">
+                <h2>Login</h2>
+    Username
+    <br>
+    {{form.username}}
+    <br>
+    Password
+    <br>
+    {{form.password}}
+    <br>
+    {% csrf_token %}
+    <input type="submit" class="btn btn-primary" value="Login">
+            </div>
+        </div>
+    </div>
+    
+</form>
+{% endblock %}
